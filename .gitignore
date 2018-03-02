@@ -1,0 +1,4 @@
+a.out
+libasm.so
+*test*
+*.o
