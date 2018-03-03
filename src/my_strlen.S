@@ -14,5 +14,4 @@ my_for:
 	jmp my_for
 
 end:
-	mov eax, rax
 	ret
