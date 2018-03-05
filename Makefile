@@ -14,11 +14,11 @@ ASFLAGS	=	-f elf64
 NAME	=	libasm.so
 
 %.o:%.S
-	$(nasm) -f elf64 $< -o $(NAME)
+	nasm -f elf64 $<
 
 all: $(NAME)
 
-$(NAME):
+$(NAME):	$(OBJ)
 	gcc $(CFLAGS) -shared -fpic $(OBJ) -o $(NAME)
 
 clean:
