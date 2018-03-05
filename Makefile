@@ -6,7 +6,8 @@
 ##
 
 SRC	=	src/my_strlen.S	\
-		src/my_strchr.S
+		src/my_strchr.S	\
+		src/my_memset.S
 
 OBJ	=	$(SRC:.S=.o)
 
