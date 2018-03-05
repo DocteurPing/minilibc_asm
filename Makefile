@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC	=	src/my_strlen.S
+SRC	=	src/my_strlen.S	\
+		src/my_strchr.S
 
 OBJ	=	$(SRC:.S=.o)
 
