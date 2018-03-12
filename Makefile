@@ -6,12 +6,14 @@
 ##
 
 SRC	=	src/my_strlen.S	\
-		src/my_strchr.S	\
-		src/my_memset.S
+		src/my_memset.S	\
+		src/my_strchr.S	
 
 OBJ	=	$(SRC:.S=.o)
 
 ASFLAGS	=	-f elf64
+
+LFLAGS	=	-shared -fno-builtin
 
 NAME	=	libasm.so
 
@@ -21,7 +23,7 @@ NAME	=	libasm.so
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-	gcc $(CFLAGS) -shared -fpic $(OBJ) -o $(NAME)
+	gcc $(CFLAGS) $(LFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 

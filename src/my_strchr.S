@@ -17,7 +17,6 @@ my_for:
 
 end_null:
 	xor rax, rax
-	ret
 
 end_not_null:
 	ret
