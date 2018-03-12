@@ -11,7 +11,7 @@ my_for:
 	cmp BYTE [rax], 0
 	jz end_null
 	cmp BYTE [rax], sil
-	jz end_not_null
+	jz end_not_null	
 	inc rax
 	jmp my_for
 

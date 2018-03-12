@@ -6,8 +6,9 @@
 ##
 
 SRC	=	src/my_strlen.S	\
+		src/my_strchr.S	\
 		src/my_memset.S	\
-		src/my_strchr.S	
+		src/my_memcpy.S
 
 OBJ	=	$(SRC:.S=.o)
 
@@ -26,6 +27,7 @@ $(NAME):	$(OBJ)
 	gcc $(CFLAGS) $(LFLAGS) $(OBJ) -o $(NAME)
 
 clean:
+	rm -rf $(OBJ)
 
 fclean:	clean
 	rm -rf $(NAME)
