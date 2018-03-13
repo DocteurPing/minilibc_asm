@@ -10,7 +10,7 @@ strlen:
 my_for:
 	cmp BYTE [rdi + rcx], 0	; compare if NULL
 	jz end			; jump to end
-	inc rcx			; rax ++
+	inc rcx			; rcx ++
 	jmp my_for		; jump to my_for
 
 end:

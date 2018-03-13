@@ -8,6 +8,8 @@ strchr:
 	mov rax, rdi
 
 my_for:
+	cmp sil, 0
+	jz end_not_null
 	cmp BYTE [rax], 0
 	jz end_null
 	cmp BYTE [rax], sil

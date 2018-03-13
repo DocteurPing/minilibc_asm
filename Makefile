@@ -6,10 +6,10 @@
 ##
 
 SRC	=	src/my_strlen.S	\
-		src/my_strchr.S	\
-		src/my_memset.S	\
+		src/my_strcmp.S	\
 		src/my_memcpy.S	\
-		src/my_strcmp.S
+		src/my_memset.S	\
+		src/my_strchr.S
 
 OBJ	=	$(SRC:.S=.o)
 
@@ -25,7 +25,7 @@ NAME	=	libasm.so
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-	gcc $(CFLAGS) $(LFLAGS) $(OBJ) -o $(NAME)
+	ld $(CFLAGS) $(LFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)
