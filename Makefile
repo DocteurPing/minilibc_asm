@@ -5,13 +5,13 @@
 ## Makefile
 ##
 
-SRC	=	src/my_strlen.S	\
-		src/my_strcmp.S	\
-		src/my_memcpy.S	\
-		src/my_memset.S	\
-		src/my_strchr.S	\
-		src/my_strncmp.S
-
+SRC	=	src/my_strlen.S		\
+		src/my_strcmp.S		\
+		src/my_memcpy.S		\
+		src/my_memset.S		\
+		src/my_strchr.S		\
+		src/my_strncmp.S	\
+		src/my_rindex.S
 OBJ	=	$(SRC:.S=.o)
 
 ASFLAGS	=	-f elf64
