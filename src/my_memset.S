@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL memset
 
 memset:
+push rbp
+	mov rbp, rsp
 	xor rcx, rcx
 	mov rax, rdi
 
@@ -18,4 +20,5 @@ my_for:
 
 end:
 	mov rax, rdi
+	leave
 	ret

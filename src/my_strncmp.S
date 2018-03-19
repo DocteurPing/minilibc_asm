@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL strncmp
 
 strncmp:
+	push rbp
+	mov rbp, rsp
 	xor rcx, rcx
 my_loop:
 	cmp rcx, rdx
@@ -23,4 +25,5 @@ my_loop:
 my_end:
 	sub r9b, r8b
 	movsx rax, r9b
+	leave
 	ret

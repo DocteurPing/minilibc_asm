@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL strpbrk
 
 strpbrk:
+	push rbp
+	mov rbp, rsp
 	mov r8, rdi
 
 my_loop:
@@ -34,4 +36,5 @@ my_end_good:
 	mov rax, [r8]
 
 my_end:
+	leave
 	ret

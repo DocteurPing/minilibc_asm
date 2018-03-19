@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL strlen
 
 strlen:
+	push rbp
+	mov rbp, rsp
 	xor rcx, rcx		; set rax to 0
 
 my_for:
@@ -15,4 +17,5 @@ my_for:
 
 end:
 	mov rax, rcx
+	leave
 	ret

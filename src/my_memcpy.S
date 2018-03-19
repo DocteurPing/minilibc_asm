@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL memcpy
 
 memcpy:
+	push rbp
+	mov rbp, rsp
 	xor rcx, rcx
 my_loop:
 	cmp rdx, rcx
@@ -16,4 +18,5 @@ my_loop:
 
 my_end:
 	mov rax, rdi
+	leave
 	ret
