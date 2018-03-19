@@ -13,7 +13,7 @@ CFLAGS  =       -Wall -Wextra -Winit-self -Wwrite-strings
 CFLAGS  +=      -Wcast-align -Wshadow -Wredundant-decls -Wfloat-equal
 CFLAGS  +=      -Wundef -Wlogical-op -Winline -Wdouble-promotion
 CFLAGS  +=      -Wunreachable-code -coverage -Iinclude -I../include
-CFLAGS  +=      -coverage -L../lib
+CFLAGS  +=      -coverage -L../lib -fno-builtin
 
 OBJ	=	$(SRC:.c=.o)
 
