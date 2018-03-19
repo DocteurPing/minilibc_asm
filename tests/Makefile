@@ -5,7 +5,8 @@
 ## makefile
 ##
 
-SRC	=	test_strchr.c
+SRC	=	test_strchr.c	\
+		test_strcspn.c
 
 CFLAGS  =       -Wall -Wextra -Winit-self -Wwrite-strings
 CFLAGS  +=      -Wcast-align -Wshadow -Wredundant-decls -Wfloat-equal

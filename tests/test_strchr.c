@@ -6,7 +6,6 @@
 */
 
 #include <criterion/criterion.h>
-#include "stdio.h"
 
 Test(my_strchr, easy)
 {

@@ -12,7 +12,8 @@ SRC	=	src/my_strlen.S		\
 		src/my_strchr.S		\
 		src/my_strncmp.S	\
 		src/my_rindex.S		\
-		src/my_strpbrk.S
+		src/my_strpbrk.S	\
+		src/my_strcspn.S
 OBJ	=	$(SRC:.S=.o)
 
 ASFLAGS	=	-f elf64
