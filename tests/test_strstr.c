@@ -23,3 +23,11 @@ Test(my_strstr, no_match)
 	str = strstr("salut tout le monde", "z");
 	cr_assert_null(str);
 }
+
+Test(my_strstr, no_match_string_longer)
+{
+	char *str;
+
+	str = strstr("salut tout le monde", "salut tout le monde!!!");
+	cr_assert_null(str);
+}
