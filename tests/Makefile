@@ -6,7 +6,8 @@
 ##
 
 SRC	=	test_strchr.c	\
-		test_strcspn.c
+		test_strcspn.c	\
+		test_strstr.c
 
 CFLAGS  =       -Wall -Wextra -Winit-self -Wwrite-strings
 CFLAGS  +=      -Wcast-align -Wshadow -Wredundant-decls -Wfloat-equal
