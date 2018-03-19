@@ -7,23 +7,23 @@ GLOBAL strpbrk
 strpbrk:
 	push rbp
 	mov rbp, rsp
-	mov r8, rdi
+	mov rdx, rdi
 
 my_loop:
-	cmp BYTE [r8], 0
+	cmp BYTE [rdx], 0
 	jz my_end_fail
 	mov r9, rsi
 	jmp my_check
 
 my_inc:
-	inc r8
+	inc rdx
 	jmp my_loop
 
 my_check:
 	cmp BYTE [r9], 0
 	jz my_inc
-	mov al, [r9]
-	cmp [r8], al
+	mov al, [rdx]
+	cmp [r9], al
 	jz my_end_good
 	inc r9
 	jmp my_check
@@ -33,7 +33,7 @@ my_end_fail:
 	jmp my_end
 
 my_end_good:
-	mov rax, [r8]
+	mov rax, rdx
 
 my_end:
 	leave
