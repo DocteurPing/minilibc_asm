@@ -20,7 +20,7 @@ Test(my_strchr, nullbyte)
 {
 	char    motA[100] = "Bravo";
 	char    *pointeurLettre0 = strchr(motA, 0);
-	
+
 	*pointeurLettre0 = 'c';
 	cr_assert(motA, "Bravoc");
 }
