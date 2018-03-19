@@ -7,21 +7,12 @@ GLOBAL memmove
 memmove:
 	push rbp
 	mov rbp, rsp
-	mov rax, rdi
+	xor rcx, rcx
+	mov rax, rdi		; move pointer dest to rax
 	mov r8, rdi
 	sub r8, rsi
-	cmp r8, 0
+	cmp r8, 0		; check if src > dest
 	jge first_right
-
-first_left:
-	xor rcx, rcx
-
-move_left:
-	cmp rcx, rdx
-	jz end
-	mov r8b, [rsi + rcx]
-	mov [rdi + rcx], r8b
-	inc rcx
 	jmp move_left
 
 first_right:
@@ -33,7 +24,15 @@ move_right:
 	mov r8b, [rsi + rdx]
 	mov [rdi + rdx], r8b
 	dec rdx
-	jmp move_right
+	jmp move_right		
+
+move_left:
+	cmp rcx, rdx
+	jz end
+	mov r8b, [rsi + rcx]
+	mov [rdi + rcx], r8b
+	inc rcx
+	jmp move_left
 
 end:
 	leave
