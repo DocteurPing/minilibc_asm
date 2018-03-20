@@ -20,3 +20,17 @@ Test(my_strcspn, no_stop)
 	len = strcspn("this is a test", "z");
 	cr_assert_eq(len, 14);
 }
+
+Test(my_strcspn, zero)
+{
+	int len;
+	len = strcspn("this is a test", "t");
+	cr_assert_eq(len, 0);
+}
+
+Test(my_strcspn, one)
+{
+	int len;
+	len = strcspn("this is a test", "h");
+	cr_assert_eq(len, 1);
+}

@@ -3,3 +3,4 @@ libasm.so
 *.o
 *.gcda
 *.gcno
+myTests
