@@ -8,8 +8,6 @@ strchr:
 	push rbp
 	mov rbp, rsp
 	mov rax, rdi
-	cmp sil, 0
-	jz end_not_null
 
 my_for:
 	cmp BYTE [rax], sil
