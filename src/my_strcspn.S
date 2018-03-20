@@ -4,7 +4,7 @@ SECTION .text
 
 GLOBAL strcspn
 
-strpbrk:
+strcspn:
 	push rbp
 	mov rbp, rsp
 	mov rdx, rdi
