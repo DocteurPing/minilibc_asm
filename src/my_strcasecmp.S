@@ -14,6 +14,7 @@ check_first_parameter_lower:
 	jl check_second_parameter_lower
 	cmp r8b, 91		; check if parameter 1 is a letter
 	jl parameter1_to_lower
+	jmp check_second_parameter_lower
 
 parameter1_to_lower:
 	add r8b, 32
@@ -24,6 +25,7 @@ check_second_parameter_lower:
 	jl compare
 	cmp r9b, 91		; check if parameter 2 is a letter
 	jl parameter2_to_lower
+	jmp compare
 
 parameter2_to_lower:
 	add r9b, 32
