@@ -20,6 +20,11 @@ my_loop:
 
 my_ret:
 	mov rax, [rdi + rcx]
+	cmp BYTE [rdi + rcx], 0
+	jz my_end
+	inc rcx
+	jmp my_loop
+	
 
 my_end:
 	leave
